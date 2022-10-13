@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<title>(De)Codificador</title>
+
+	</head>
+
+	<body>
+		<div class="container">
+
+			<h1 style="text-align: center;">(De)Codificador</h1>
+			
+			<div class="pedido1">Por favor, digite a mensagem a ser codificada ou decodificada:</div>
+			
+			<textarea id="input" rows="5" cols="52"></textarea>
+
+			<div class="selecoes">				
+				<select id="cifraTipo">
+					<option value="selecione" disabled selected>Selecione o tipo:</option>
+					<option value="cifraCesar">Cifra de César</option>
+					<option value="base64">Base64</option>
+				</select>
+
+				<div id="salto">
+					<input type="range" value="1" min="1" max="26" class="range" id="range" oninput="rangenumber.value=value">
+					<input type="number" name="1" min="1" max="26" id="rangenumber" oninput="range.value=value">
+				</div>
+				
+				<div class="pedido3">O que fazer?</div>
+				
+				<div id="cifraCodDec">
+					<input type="radio" name="CodDec" value="codificador" id="cod">
+					<label for="codificador">codificar</label><br>
+					<input type="radio" name="CodDec" value="decodificador" id="dec">
+					<label for="decodificador">decodificar</label>
+				</div>
+			</div>
+
+			<div id="btn">
+			<button>codificar/decodificar mensagem</button>
+			</div>
+			
+			<textarea id="output" rows="5" cols="52"></textarea>
+
+			<script src="js/script.js"></script>
+
+		</div>
+
+		
+
+	</body>
+
+</html>
